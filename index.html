@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Define heads-->
+    <head>
+        <title>CSE 110 Group 15 First Meeting</title>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <meta name="description" content="A meeting minutes for group 15 and hope google webcrawler scan this">
+        <!--Auto resolution adjustment for different devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Ben Zhang">
+    </head>
+    <body>
+        <!--Meeting minute must have-->
+        <header>
+            <h1>CSE 110 Group 15 First Meeting</h1>
+            <h4>Check-in for the first time</h4>
+            <h5>October 6th 2022</h5>
+            <article>
+                <h3>Attendance</h3>
+                <p>Alevine, Alex, Ben, 2 Erics, Muhe, Richard, Shubham, Usman, Zach</p>
+            </article>
+        </header>
+        <main> 
+            <!--Navigation list for different sections/part-->
+            <h2>Agenda</h2>
+            <nav>
+                <a href="#lastMeeting">Unfinished from last meeting</a><br>
+                <a href="#knowPeople">Get to know each other</a><br>
+                <a href="#questions">New Questions</a><br>
+                <a href="#nextTimeList">Objective for next time</a><br>
+                <a href="#recording">Video and Audio of meeting</a><br>
+                <a href="#form">Form Requirement</a>
+            </nav>
+            <!--Contains div and img-->
+            <div class="noCSS">
+                <h2>This is a fake white board picture for the meeting</h2>
+                <img src="images/board.jpeg" alt="Fake White Board">
+            </div>
+            <!--Meeting notes-->
+            <p>This section contains a span <span>with no style</span>.</p>
+            <section id="lastMeeting">
+                <h2>From Last Meeting</h2>
+                <article>
+                <h3>Unfinished from last meeting</h3>
+                <!--<b> here bold something to stand out-->
+                <p>This is the <i>first meeting</i>, so <b>nothing</b> is unfinished from previous meeting</p>
+                <details>
+                    <summary>Detail of last meeting</summary>
+                    <p>There is <i>nothing</i> to show for the last meeting</p>
+                </details>
+                </article>
+            </section>
+
+            <section id="knowPeople">
+                <h2>Get to know each other</h2>
+                <article>
+                <!--<i> here to indicate this is the first meeting-->
+                <h3>First <i>In-person Meeting</i></h3>
+                <!--<strong> here show a whole strong sentence-->
+                <p><strong>This is the <em>first time</em> that the group actually meet each other in person. People are chill and hope we can work well together</strong></p>
+                </article>
+                <article>
+                <h3>Match the face and the name</h3>
+                 <!--<em> here to emthasize it's really bad-->
+                <p>We are <em>really bad</em> at matching the face and name. Also we have <b>2 Eric Chen</b> which confuse everyone more.</p>
+                </article>
+            </section>
+            <hr>
+            <section id="questions">
+                <h3>Questions in the Meeting</h3>
+                <ul>
+                    <li>How to code</li>
+                    <li>How to finish all labs</li>
+                    <li>What can I do to pass the test</li>
+                </ul>
+                
+            </section>
+            <hr>    
+            <section id="nextTimeList">
+                <h2>Objective for next meeting</h2>
+                <ol type="A">
+                  <li>Talk about project</li>
+                  <li>Make people engineers again</li>
+                  <li>Learn the names again</li>
+                </ol>
+            </section>
+            <hr>
+            <section id="recording">
+                <h3>Video and Audio of recreation of our meeting through minions</h3>
+                <h5>Audio</h5>
+                <audio controls>
+                <source src="videoAudio/meeting.mp3" type="audio/mpeg">
+                    Audio Broken
+                </audio>
+                <h5>Video</h5>
+                <video width="320" height="240" controls>
+                <source src="videoAudio/meeting.mp4" type="video/mp4">
+                    Video Broken
+                </video>
+            </section>
+            <hr>
+            <!--Form part contains all requirements-->
+            <h2 id="form">Tags for fulfilling form requirements</h2>
+            <form action="none" method="get">
+                <fieldset>
+                    <legend>Enter information to join team:</legend>
+                    <label for="inName">Name:</label>
+                    <input type="text" id="inName" name="inName">
+                    <br>
+                    <label for="checkRobot">Are you a Robot?</label>
+                    <input type="checkbox" id="checkRobot" name="checkRobot">
+                    <br>
+                    <label for="letter">Choose a letter:</label>
+                    <input type="radio" id="letter1" name="letter"> a
+                    <input type="radio" id="letter2" name="letter"> b
+                    <input type="radio" id="letter3" name="letter"> c
+                    <input type="radio" id="letter4" name="letter"> d
+                    <br>
+                    <label for="date">Today's date:</label>
+                    <input type="date" id="date" name="date">
+                    <button type="button">Enter</button>
+                </fieldset>
+                <textarea id="someText" name="outText" rows="5" cols="15">
+                This is an output text to fulfill the text area requirement
+                </textarea>
+                <br>
+                <label for="options">Choose a number in the list:</label>
+                <input list="numberoption" name="options" id="options">
+                <datalist id="numberoption">
+                      <option value="1">
+                      <option value="2">
+                      <option value="3">
+                      <option value="4">
+                      <option value="5">
+                </datalist>
+                <input type="Submit"><br>
+                <label for="selecting">Choose a selection:</label>
+                <select name="selecting" id="selecting">
+                    <option value="!">!</option>
+                    <option value="@">@</option>
+                    <option value="#">#</option>
+                    <option value="$">$</option>
+                </select>
+                <button type="button">Select</button>
+            </form>
+        </main>
+        <footer>
+            <p>Author: Ben Zhang<br>
+            <a href="">Github Repo</a></p>
+        </footer>
+    </body>
+</html>
