@@ -3,6 +3,7 @@ body {
     /* eliminate blue light for eyes*/
     background-color: lightyellow;
     padding: 1in 1in 1in 1in;
+    
 }
 
 /* each header contains a different color representation 
@@ -10,13 +11,16 @@ body {
 h1 {
     color: hsl(50%,50%,100%);
     text-align: center;
+    min-height: 50mm;
+    position: relative;
 }
-/* apply short margin */
+/* apply short margin and text decoration */
 h2 {
     color: #000;
     text-align: left;
     font-size: 22px;
     margin: 1px 1px 1px 1px;
+    text-decoration:overline;
 }
 
 h3 {
@@ -24,6 +28,18 @@ h3 {
     text-align: center;
     font-size:5mm; 
     display: inline;
+    position: static;
+    text-decoration:underline;
+    max-height: 40pt;
+}
+/* no text decoration for h4 */
+h4{
+    text-decoration:none;
+}
+/* display none to hide h6 */
+h6{
+    display: none;
+    position: absolute;
 }
 
 /* apply text css and fontsize */
@@ -33,6 +49,12 @@ p {
     text-decoration: underline;
     text-align: left;
     color: #000;
+}
+/* Apply media to adjust font size for different screen width */
+@media (min-width: 400px) and (orientation: landscape) {
+    p {
+        font-size: 20pt;
+    }
 }
 
 /* apply long padding*/
@@ -48,7 +70,6 @@ div.whiteboard {
 div.whiteboard img{
     width: 50%;
     height: auto;
-    display: none;
 }
 /* implement box CSS */
 div.whiteboard:hover {
@@ -81,22 +102,51 @@ input[type=radio] {
 input[type=date] {
     border: 10px dotted rgb(255,100,0);
     margin-left: 20lvh;
+    max-width: 20px;
 }
 
 input[type=checkbox] {
     border: 5cm solid;
     margin-right: 20vmax; 
     border-color: hsl(255,100,0);
+    min-width: 20pt;
 }
-/* implement display*/
+/* implement display and position*/
 span {
     display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 1px;
+    position: sticky;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
     border: 10px dotted blue;    
     background-color: pink; 
 }
+
+span:active {
+    background: purple;
+    padding-top: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+    padding-left: 100px;
+}
+
 i {
     display: block;
+    position: relative;
+}
+
+/* Apply flex display */
+.meetingFormat {
+    display: flex;
+    background-color: greenyellow;
+    order: 3;
+    justify-content: space-between;
+}
+
+.meetingFormat > div {
+    background-color: #AAA;
+    flex-grow: 2;
+    margin: 5px;
+    padding: 10px;
+    font-size: 20px;
 }
