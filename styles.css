@@ -1,8 +1,11 @@
+/* add background color to the whole website */
 body {
     /*eliminate blue light for eyes*/
     background-color: lightyellow;
 }
 
+/*each header contains a different color representation 
+    and absolute length unit*/
 h1 {
     color: hsl(50,50,100);
     text-align: center;
@@ -24,11 +27,40 @@ p {
     font-family: times;
     font-size: 12pt;
 }
+
 div.whiteboard img{
     width: 50%;
     height: auto;
     
 }
+/* implement box CSS*/
 div.whiteboard:hover {
-  border: 1px solid #777;
+    border: 2px solid #888;
+}
+
+label {
+    
+}
+
+/* implement box CSS and relative unit for different form input*/
+input[type=text] {
+    border: 2px solid green;
+    margin-top: 1em;
+    
+    border-radius: 4px;
+}
+
+input[type=radio] {
+    border: 10px dashed #ABF;
+    margin-bottom: 10vw;
+}
+
+input[type=date] {
+    border: 5px solid rbg(255,100,0);
+    margin-left: 20svw;
+}
+
+input[type=date] {
+    border: 5px solid rbg(255,100,0);
+    margin-right: 20svw; 
 }
