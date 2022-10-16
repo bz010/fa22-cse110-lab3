@@ -15,6 +15,7 @@ body {
 h1 {
     color: hsl(9, 100%, 64%);
     text-align: center;
+    font-size: 50px;
     min-height: 50mm;
     position: relative;
     font-family: 'Tangerine', serif;
@@ -166,16 +167,22 @@ div + p {
     font-size: 20px;
 }
 
-/* Apply Grid Container and its attributes to context */
-a {
+/* Apply Grid Container and its attributes to nav */
+nav {
+    background-color: orange;
+}
+
+nav > a {
+    background-color: aqua;
     display: grid;
     justify-content: space-around;
     align-content: center;
-    grid-template-columns: 40px 40px 10px 20px;
+    grid-template-columns: 100px 10px auto auto;
     column-gap: 100px;
 }
 /*identify grid property for special class and combining two selectors*/
 a.special {
+    background-color: white;
     grid-column: 1/2;
     grid-row: 2/5;
 }
