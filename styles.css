@@ -1,3 +1,8 @@
+/* add universal selector*/
+* {
+  text-align: center;
+}
+
 /* add background color and short padding to the whole website */
 body {
     /* eliminate blue light for eyes*/
@@ -6,17 +11,21 @@ body {
 }
 
 /* each header contains a different color representation 
-    and absolute length unit */
+    and absolute length unit, also an element selector */
 h1 {
-    color: hsl(50%,50%,100%);
+    color: hsl(9, 100%, 64%);
     text-align: center;
+    min-height: 50mm;
+    position: relative;
+    font-family: 'Tangerine', serif;
 }
-/* apply short margin */
+/* apply short margin and text decoration */
 h2 {
     color: #000;
     text-align: left;
     font-size: 22px;
     margin: 1px 1px 1px 1px;
+    text-decoration:overline;
 }
 
 h3 {
@@ -24,18 +33,45 @@ h3 {
     text-align: center;
     font-size:5mm; 
     display: inline;
+    position: static;
+    text-decoration:underline;
+    max-height: 40pt;
+}
+/* no text decoration for h4 and h5 as sector list*/
+h4,h5 {
+    text-decoration:none;
+}
+/* display none to hide h6 */
+h6 {
+    display: none;
+    position: absolute;
 }
 
-/* apply text css and fontsize */
-p {
+/* apply text css and fontsize to descendant of div */
+div p {
     font-family: times;
     font-size: 12pt;
-    text-decoration: underline;
     text-align: left;
     color: #000;
 }
+/* apply text css and fontsize to siblings of div */
+div ~ p {
+  background-color: skyblue;
+}
 
-/* apply long padding*/
+/* apply css with id selector */
+#lastMeeting{
+    text-decoration: line-through;
+}
+/* Apply media query to adjust font size 
+        for different screen width for responsiveness */
+@media (min-width: 400px) and (orientation: landscape) {
+    p {
+        font-size: 20pt;
+    }
+}
+
+/* apply long padding and class selector*/
 div.whiteboard {
     background: green;
     padding-top: 20px;
@@ -45,10 +81,9 @@ div.whiteboard {
 }
 
 /* apply width, height*/
-div.whiteboard img{
+div.whiteboard img {
     width: 50%;
     height: auto;
-    display: none;
 }
 /* implement box CSS */
 div.whiteboard:hover {
@@ -60,7 +95,7 @@ section.knowPeople {
 }
 
 /* implement border/box CSS 
-        and relative unit for different form input */
+        and relative unit for different atribute selector */
 input[type=text] {
     border-radius: 2px;
     margin-top: 1em;
@@ -75,28 +110,72 @@ input[type=radio] {
     border-radius: 10px;
     margin-bottom: 10vw;
     border-style: solid;
-    
 }
 
 input[type=date] {
     border: 10px dotted rgb(255,100,0);
     margin-left: 20lvh;
+    max-width: 20px;
 }
 
-input[type=checkbox] {
+form {
     border: 5cm solid;
     margin-right: 20vmax; 
-    border-color: hsl(255,100,0);
+    border-color: hsla(100, 100%, 60%, 0.5);
+    min-width: 20pt;
 }
-/* implement display*/
+/* implement display and position for active class*/
 span {
     display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 1px;
+    position: sticky;
+    width: 80px;
+    height: 140px;
+    padding: 10px;
     border: 10px dotted blue;    
     background-color: pink; 
 }
-i {
+
+span:active {
+    background: purple;
+    padding-top: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+    padding-left: 100px;
+}
+
+/* Apply adjacent sibling selector(change in span) */
+div + p {
     display: block;
+    position: relative;
+    color: brown
+}
+
+/* Apply flex display and its attributes */
+.meetingFormat {
+    display: flex;
+    background-color: greenyellow;
+    order: 3;
+    justify-content: space-between;
+}
+/* use child combinator */
+.meetingFormat > div {
+    background-color: #AAA;
+    flex-grow: 2;
+    margin: 5px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+/* Apply Grid Container and its attributes to context */
+a {
+    display: grid;
+    justify-content: space-around;
+    align-content: center;
+    grid-template-columns: 40px 40px 10px 20px;
+    column-gap: 100px;
+}
+/*identify grid property for special class and combining two selectors*/
+a.special {
+    grid-column: 1/2;
+    grid-row: 2/5;
 }
